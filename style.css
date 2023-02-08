@@ -1,0 +1,414 @@
+:root {
+    --html5-color: #dc4b24;
+    --php-color: #4c588e;
+    --css-color: #264add;
+    --js-color: #cfb432;
+    --vuejs-color: #40b27f;
+    --seo-color: #e51a2d;
+    --blogging-color: #e96733;
+    --project-color: #88b851;
+    --leading-color: #e9dcf7;
+    --reactjs-color: #5fd3f3;
+    --git-color: #e94e31;
+    --cli-color: #017674;
+    --quickbooks-color: #2b9b1b;
+    --msexcel-color: #206e43;
+    --d3designing-color: #337bb2;
+    --d3animation-color: #454f72;
+}
+
+body {
+    background: linear-gradient(-45deg, #2c6f9d, #e8f2ff);
+    font-family: 'Fira Sans';
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 10%);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    animation: slideIn 1s;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #041e42;
+    font-size: 38px;
+    line-height: 1.2;
+    animation: fadeIn 3s;
+}
+
+.card ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.card ul.list li.item {
+    display: none;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    width: 25%;
+    animation: fadeIn 3s;
+}
+
+.card ul.list li.item.item-4 {
+    width: 33.33%;
+}
+
+.card ul.list li.item.item-6 {
+    width: 50%;
+}
+
+.card ul.list[data-page="1"] li.item.page-1 {
+    display: flex;
+}
+
+.card ul.list[data-page="2"] li.item.page-2 {
+    display: flex;
+}
+
+.card ul.list[data-page="3"] li.item.page-3 {
+    display: flex;
+}
+
+.card ul.list li.item .progress {
+    font-size: 16px;
+    margin: 20px 10px;
+    position: relative;
+    padding: 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #f2e9e1;
+    border-radius: 50%;
+    line-height: 7.5rem;
+    cursor: pointer;
+}
+
+.card ul.list li.item:hover .progress {
+    box-shadow: 0px 0px 100px rgb(0 0 0 / 30%);
+}
+
+.card ul.list li.item.item-6 .progress {
+    width: 11rem;
+    height: 11rem;
+    line-height: 11rem;
+}
+
+.card ul.list li.item .progress:after {
+    border: none;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 6.7rem;
+    height: 6.7rem;
+    background-color: #f1f1f1;
+    content: " ";
+}
+
+.card ul.list li.item.item-6 .progress:after {
+    width: 9.6rem;
+    height: 9.6rem;
+    top: 0.7rem;
+    left: 0.7rem;
+}
+
+.card ul.list li.item .progress span {
+    position: absolute;
+    line-height: 7.5rem;
+    width: 7.5rem;
+    text-align: center;
+    display: block;
+    color: #041e42;
+    z-index: 2;
+}
+
+.card ul.list li.item.item-6 .progress span {
+    position: absolute;
+    line-height: 11rem;
+    width: 11rem;
+}
+
+.card ul.list li.item .progress .left-half-clipper {
+    border-radius: 50%;
+    width: 7.5rem;
+    height: 7.5rem;
+    position: absolute;
+    clip: rect(0, 7.5rem, 7.5rem, 3.725rem);
+}
+
+.card ul.list li.item.item-6 .progress .left-half-clipper {
+    width: 11rem;
+    height: 11rem;
+    clip: rect(0, 11rem, 11rem, 5.5rem);
+}
+
+.card ul.list li.item .progress.over50 .left-half-clipper {
+    clip: rect(auto, auto, auto, auto);
+}
+
+.card ul.list li.item .progress.over50 .left-half-clipper .first50-bar {
+    position: absolute;
+    clip: rect(0, 7.5rem, 7.5rem, 3.725rem);
+    background-color: #041e42;
+    border-radius: 50%;
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.card ul.list li.item.stack-html5 .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--html5-color);
+}
+
+.card ul.list li.item.stack-php .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--php-color);
+}
+
+.card ul.list li.item.stack-css .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--css-color);
+}
+
+.card ul.list li.item.stack-js .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--js-color);
+}
+
+.card ul.list li.item.stack-vuejs .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--vuejs-color);
+}
+
+.card ul.list li.item.stack-seo .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--seo-color);
+}
+
+.card ul.list li.item.stack-blogging .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--blogging-color);
+}
+
+.card ul.list li.item.stack-project .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--project-color);
+}
+
+.card ul.list li.item.stack-leading .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--leading-color);
+}
+
+.card ul.list li.item.stack-reactjs .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--reactjs-color);
+}
+
+.card ul.list li.item.stack-git .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--git-color);
+}
+
+.card ul.list li.item.stack-cli .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--cli-color);
+}
+
+.card ul.list li.item.stack-quickbooks .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--quickbooks-color);
+}
+
+.card ul.list li.item.stack-msexcel .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--msexcel-color);
+}
+
+.card ul.list li.item.stack-d3designing .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--d3designing-color);
+}
+
+.card ul.list li.item.stack-d3animation .progress.over50 .left-half-clipper .first50-bar {
+    background-color: var(--d3animation-color);
+}
+
+.card ul.list li.item.item-6 .progress.over50 .left-half-clipper .first50-bar {
+    clip: rect(0, 11rem, 11rem, 5.5rem);
+    width: 11rem;
+    height: 11rem;
+}
+
+.card ul.list li.item .progress .left-half-clipper .value-bar {
+    position: absolute;
+    clip: rect(0, 3.725rem, 7.5rem, 0);
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    border: 0.45rem solid #041e42;
+    box-sizing: border-box;
+}
+
+.card ul.list li.item.item-6 .progress .left-half-clipper .value-bar {
+    clip: rect(0, 5.5rem, 11rem, 0);
+    width: 11rem;
+    height: 11rem;
+    border: 0.75rem solid #041e42;
+}
+
+.card ul.list li.item.stack-html5 .progress .left-half-clipper .value-bar {
+    border-color: var(--html5-color);
+}
+
+.card ul.list li.item.stack-php .progress .left-half-clipper .value-bar {
+    border-color: var(--php-color);
+}
+
+.card ul.list li.item.stack-css .progress .left-half-clipper .value-bar {
+    border-color: var(--css-color);
+}
+
+.card ul.list li.item.stack-js .progress .left-half-clipper .value-bar {
+    border-color: var(--js-color);
+}
+
+.card ul.list li.item.stack-vuejs .progress .left-half-clipper .value-bar {
+    border-color: var(--vuejs-color);
+}
+
+.card ul.list li.item.stack-seo .progress .left-half-clipper .value-bar {
+    border-color: var(--seo-color);
+}
+
+.card ul.list li.item.stack-blogging .progress .left-half-clipper .value-bar {
+    border-color: var(--blogging-color);
+}
+
+.card ul.list li.item.stack-project .progress .left-half-clipper .value-bar {
+    border-color: var(--project-color);
+}
+
+.card ul.list li.item.stack-leading .progress .left-half-clipper .value-bar {
+    border-color: var(--leading-color);
+}
+
+.card ul.list li.item.stack-reactjs .progress .left-half-clipper .value-bar {
+    border-color: var(--reactjs-color);
+}
+
+.card ul.list li.item.stack-git .progress .left-half-clipper .value-bar {
+    border-color: var(--git-color);
+}
+
+.card ul.list li.item.stack-cli .progress .left-half-clipper .value-bar {
+    border-color: var(--cli-color);
+}
+
+.card ul.list li.item.stack-quickbooks .progress .left-half-clipper .value-bar {
+    border-color: var(--quickbooks-color);
+}
+
+.card ul.list li.item.stack-msexcel .progress .left-half-clipper .value-bar {
+    border-color: var(--msexcel-color);
+}
+
+.card ul.list li.item.stack-d3designing .progress .left-half-clipper .value-bar {
+    border-color: var(--d3designing-color);
+}
+
+.card ul.list li.item.stack-d3animation .progress .left-half-clipper .value-bar {
+    border-color: var(--d3animation-color);
+}
+
+.card ul.list li.item .progress.p100 .value-bar {
+    transform: rotate(360deg);
+}
+
+.card ul.list li.item .progress.p95 .value-bar {
+    transform: rotate(342deg);
+}
+
+.card ul.list li.item .progress.p90 .value-bar {
+    transform: rotate(324deg);
+}
+
+.card ul.list li.item .progress.p80 .value-bar {
+    transform: rotate(288deg);
+}
+
+.card ul.list li.item .progress.p70 .value-bar {
+    transform: rotate(252deg);
+}
+
+.card ul.list li.item .progress.p60 .value-bar {
+    transform: rotate(216deg);
+}
+
+.card ul.list li.item .progress.p50 .value-bar {
+    transform: rotate(180deg);
+}
+
+.card ul.list li.item .progress.p45 .value-bar {
+    transform: rotate(162deg);
+}
+
+.card ul.list li.item .progress.p40 .value-bar {
+    transform: rotate(144deg);
+}
+
+.card ul.list li.item .progress.p30 .value-bar {
+    transform: rotate(108deg);
+}
+
+ul.pagination {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 10px 40px;
+}
+
+ul.pagination li.page-to {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul.pagination li.page-to.page-to-active {
+    border-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes slideIn {
+    0% {
+        margin-left: -100%;
+    }
+    99.9999999% {
+        margin-left: 0%;
+    }
+    100% {
+        margin-left: auto;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
